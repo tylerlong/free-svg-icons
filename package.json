@@ -2,6 +2,7 @@
   "license": "UNLICENSED",
   "version": "0.1.0",
   "scripts": {
+    "build": "ts-node scripts/build.ts",
     "lint": "eslint --fix '**/*.{ts,tsx,js,jsx}' && prettier --write .",
     "test": "ts-node src/index.ts"
   },
@@ -11,6 +12,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.3.0"
   },
   "devDependencies": {
+    "@material-design-icons/svg": "^0.14.3",
     "@types/node": "^18.15.0",
     "@typescript-eslint/eslint-plugin": "^5.54.1",
     "@typescript-eslint/parser": "^5.54.1",
