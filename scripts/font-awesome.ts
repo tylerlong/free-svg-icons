@@ -4,7 +4,6 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 
 import path from 'path';
 import fs from 'fs';
-import { scale } from 'scale-svg-d';
 
 let code = `import FreeIcon from '../free-icon';
 
@@ -12,11 +11,12 @@ export default [`;
 const gather = (category: string, iconPack: IconPack) => {
   for (const key of Object.keys(iconPack)) {
     const icon = iconPack[key];
-    let svgPath = icon.icon[4];
-    if (Array.isArray(svgPath)) {
-      svgPath = svgPath.join('');
+    let ds = icon.icon[4];
+    if (!Array.isArray(ds)) {
+      ds = [ds];
     }
-    code += `\n  new FreeIcon(['font-awesome', '${category}', '${icon.iconName}'], '${scale(svgPath, 0.5)}'),`;
+    const paths = ds.map((d) => `<path d="${d}"/>`).join('');
+    code += `\n  new FreeIcon(['font-awesome', '${category}', '${icon.iconName}'], '${paths}', 0.5),`;
   }
 };
 gather('solid', fas);

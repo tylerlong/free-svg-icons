@@ -4,14 +4,14 @@ import { convertArrayToTree, TreeNode } from './utils';
 
 const icons = [...fontawesome, ...materialIcons];
 icons.sort((a, b) => {
-  return a.cascade.join('').localeCompare(b.cascade.join(''));
+  return a.path.join('').localeCompare(b.path.join(''));
 });
 
-export const tree: TreeNode[] = convertArrayToTree(icons.map((icon) => icon.cascade));
+export const tree: TreeNode[] = convertArrayToTree(icons.map((icon) => icon.path));
 
 export const map: { [key: string]: string } = {};
 for (const icon of icons) {
-  map[icon.cascade.join('>')] = icon.svgPath;
+  map[icon.path.join('>')] = icon.svgGroup;
 }
 
 export default icons;
