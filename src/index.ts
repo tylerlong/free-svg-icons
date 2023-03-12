@@ -37,4 +37,9 @@ function convertObjectToTree(obj: any): TreeNode[] {
 
 export const tree = convertObjectToTree(convertArrayToObject(icons.map((icon) => icon.cascade)));
 
+export const map: { [key: string]: string } = {};
+for (const icon of icons) {
+  map[icon.cascade.join('>')] = icon.svgPath;
+}
+
 export default icons;
