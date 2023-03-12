@@ -1,11 +1,15 @@
 {
-  "license": "UNLICENSED",
+  "license": "MIT",
+  "name": "free-svg-icons",
   "version": "0.1.0",
   "scripts": {
     "build": "ts-node scripts/build.ts",
     "lint": "eslint --fix '**/*.{ts,tsx,js,jsx}' && prettier --write .",
-    "test": "ts-node src/index.ts"
+    "test": "ts-node src/index.ts",
+    "prepublishOnly": "tsc src/index.ts --declaration --outDir lib"
   },
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.3.0",
     "@fortawesome/free-regular-svg-icons": "^6.3.0",
