@@ -19,13 +19,14 @@ function convertArrayToObject(arr: string[][]): any {
 
 interface TreeNode {
   value: string;
+  label: string;
   children?: TreeNode[];
 }
 
 function convertObjectToTree(obj: any): TreeNode[] {
   const tree: TreeNode[] = [];
   for (const key of Object.keys(obj)) {
-    const node: TreeNode = { value: key };
+    const node: TreeNode = { value: key, label: key };
     const children = obj[key];
     if (children && typeof children === 'object' && Object.keys(children).length > 0) {
       node.children = convertObjectToTree(children);
