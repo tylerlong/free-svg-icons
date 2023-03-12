@@ -6,7 +6,7 @@
     "build": "ts-node scripts/build.ts",
     "lint": "eslint --fix '**/*.{ts,tsx,js,jsx}' && prettier --write .",
     "test": "ts-node src/index.ts",
-    "prepublishOnly": "tsc src/index.ts --declaration --outDir lib"
+    "prepublishOnly": "rm -rf lib && tsc src/index.ts --declaration --outDir lib"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

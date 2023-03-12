@@ -26,4 +26,4 @@ for (const category of categories) {
 }
 
 code += '\n]';
-fs.writeFileSync(path.join(__dirname, '..', 'src', 'material-icons.ts'), code);
+fs.writeFileSync(path.join(__dirname, '..', 'src', 'generated', 'material-icons.ts'), code);
