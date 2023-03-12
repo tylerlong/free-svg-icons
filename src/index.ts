@@ -1,3 +1,4 @@
+import FreeIcon from './free-icon';
 import fontawesome from './generated/font-awesome';
 import materialIcons from './generated/material-icons';
 import { convertArrayToTree, TreeNode } from './utils';
@@ -9,9 +10,9 @@ icons.sort((a, b) => {
 
 export const tree: TreeNode[] = convertArrayToTree(icons.map((icon) => icon.path));
 
-export const map: { [key: string]: string } = {};
+export const map: { [key: string]: FreeIcon } = {};
 for (const icon of icons) {
-  map[icon.path.join('>')] = icon.svgGroup;
+  map[icon.path.join('>')] = icon;
 }
 
 export default icons;
