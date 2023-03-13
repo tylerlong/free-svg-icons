@@ -20,7 +20,7 @@ for (const category of categories) {
     if (m === null) {
       throw new Error('Cannot find the matched SVG Pattern: ' + svg);
     }
-    code += `\n  new FreeIcon(['material-icons', '${category}', '${iconName}'], '${m[1]}', 20),`;
+    code += `\n  new FreeIcon(['material-icons', '${category}', '${iconName}'], '${m[1]}', 12),`;
   }
 }
 
