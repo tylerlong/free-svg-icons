@@ -130,6 +130,11 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@stencil/core@^2.18.0":
+  version "2.22.2"
+  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-2.22.2.tgz#f518b6bfae85352c72cd07fcaf2f2b61e0581fd9"
+  integrity sha512-r+vbxsGNcBaV1VDOYW25lv4QfXTlNoIb5GpUX7rZ+cr59yqYCZC5tlV+IzX6YgHKW62ulCc9M3RYtTfHtNbNNw==
+
 "@tsconfig/node10@^1.0.7":
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/@tsconfig/node10/-/node10-1.0.9.tgz#df4907fc07a886922637b15e02d4cebc4c0021b2"
@@ -703,6 +708,13 @@ inherits@2:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.4.tgz#0fa2c64f932917c3433a0ded55363aae37416b7c"
   integrity sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
+
+ionicons@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/ionicons/-/ionicons-7.0.0.tgz#7597e4954a00facac928809cde162d80d3d9427d"
+  integrity sha512-5G9gBxaUfJm0aAr/Kg5Eb/d7d+pMC65yiHjlkGATLrHSZgAzlc9l6ho0dCSdfq3wGef2QiZeNsvyChPVggfXwQ==
+  dependencies:
+    "@stencil/core" "^2.18.0"
 
 is-extglob@^2.1.1:
   version "2.1.1"

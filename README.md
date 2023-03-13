@@ -4,3 +4,4 @@
 
 - Font Awesome free icons
 - Material icons.
+- Ionicons
