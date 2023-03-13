@@ -25,7 +25,7 @@ for (const filePath of files) {
   if (m === null) {
     throw new Error('Cannot find the matched SVG Pattern: ' + svg);
   }
-  code += `\n  new FreeIcon(['ionicons', '${category}', '${iconName}'], '${m[1]}', 0.5),`;
+  code += `\n  new FreeIcon(['ionicons', '${category}', '${iconName}'], '${m[1].trim()}', 0.5),`;
 }
 
 code += '\n]';

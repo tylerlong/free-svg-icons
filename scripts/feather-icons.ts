@@ -12,7 +12,7 @@ for (const filePath of files) {
     continue;
   }
   const iconName = filePath.substring(0, filePath.length - 4);
-  const svg = fs.readFileSync(path.join(folderPath, filePath), 'utf-8');
+  const svg = fs.readFileSync(path.join(folderPath, filePath), 'utf-8').trim();
   code += `\n  new FreeIcon(['feather-icons', '${iconName}'], '${svg}', 12),`;
 }
 
