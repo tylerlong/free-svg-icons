@@ -13,11 +13,7 @@ for (const filePath of files) {
   }
   const iconName = filePath.substring(0, filePath.length - 4);
   const svg = fs.readFileSync(path.join(folderPath, filePath), 'utf-8');
-  const m = svg.match(/<svg .+?>(.+?)<\/svg>/);
-  if (m === null) {
-    throw new Error('Cannot find the matched SVG Pattern: ' + svg);
-  }
-  code += `\n  new FreeIcon(['feather-icons', '${iconName}'], '${m[1]}', 12),`;
+  code += `\n  new FreeIcon(['feather-icons', '${iconName}'], '${svg}', 12),`;
 }
 
 code += '\n]';
