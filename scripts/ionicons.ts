@@ -11,7 +11,7 @@ for (const filePath of files) {
   if (!filePath.endsWith('.svg')) {
     continue;
   }
-  let iconName = filePath.substring(0, filePath.length - 4).replace(/_/g, '-');
+  let iconName = filePath.substring(0, filePath.length - 4);
   let category = 'filled';
   if (iconName.endsWith('-outline')) {
     category = 'outline';
